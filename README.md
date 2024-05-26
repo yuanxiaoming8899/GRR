@@ -1,76 +1,46 @@
-
-GRR
-===================
-
-GRR est un outil de gestion et de réservation de ressources. **GRR** est une adaptation d'une application **MRBS**.
-
-
-![GitHub language count](https://img.shields.io/github/languages/count/JeromeDevome/GRR)
-![GitHub top language](https://img.shields.io/github/languages/top/JeromeDevome/GRR)
-
-![GitHub Release Date](https://img.shields.io/github/release-date/JeromeDevome/GRR?label=date%20release)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/JeromeDevome/GRR)
-
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/JeromeDevome/GRR?label=date%20pre-releases)
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/JeromeDevome/GRR?include_prereleases&label=pre-release)
-
-Site: https://grr.devome.com/
-
-Forum : https://site.devome.com/fr/grr/forum-grr
-
-Chat/Discord : https://discord.com/channels/484639573243068417/
-
-
-
-**Requiert :**
-
-PHP : >= 7.2.5 && <= 8.1; nécessite au moins les modules php-fileinfo, php-gd, php-mbstring, php-mysqli, php-mysqlnd, php-xml, php-intl (*)
-MySQL: >= 5.4 && <= 5.7
-
-
-
-----------
-
-Installation
--------------
-
-Pour obtenir une description complète de la procédure d'installation, veuillez vous reporter au fichier "**INSTALL.txt**".
-
-Pour une installation simplifiée, décompressez simplement cette archive sur un serveur, et indiquez l'adresse où se trouvent les fichiers extraits dans un navigateur (ex: http://www.monsite.fr/grr).
-
->Préalables pour l'installation automatisée :
->disposer d'un espace FTP sur un serveur, pour y transférer les fichiers
->disposer d'une base de données MySQL (adresse du serveur MySQL, login, mot de passe)
-
-
-Mise à jour
--------------
-
-Vous devez faire une mise à jour classique en suivant la procédure habituelle ( https://site.devome.com/fr/grr/telechargement/category/2-informations-documentations?download=2:mise-a-jour-de-votre-grr) . Attention PHP 7.2.5 minimum !
-
-En plus de la mise à jour classique, veuillez rendre accessible le dossier "personnalisation" en écriture. C'est désormais dans ce dossier unique que vos personnalisations seront sauvegardées.
-
-Depuis la version 4.1 le packet php-intl est obligatoire.
-
-- Déplacer votre fichier connect.inc.php dans le dossier "personnalisation"
-- Si vous possédez des modules vous devez les déplacer dans le dossier "personnalisation/modules"
-- Désormais vos variables personnalisées dans "config.inc.php" doivent être dans "/personnalisation/configperso.inc.php" (fichier à créer vous-même, cela empèchera les prochaines mises à jour d'écraser vos modifications)
-
-Vous devrez importer vos images via l'administration.
-
-Licence
--------------
-**GRR** est publié sous les termes de la **GNU General Public Licence**, dont le contenu est disponible dans le fichier "**LICENSE**", en anglais et dans le fichiers "**licence_fr.html**" en français. **GRR** est gratuit, vous pouvez le copier, le distribuer, et le modifier, à condition que chaque partie de **GRR** réutilisée ou modifiée reste sous licence **GNU GPL**. Par ailleurs et dans un soucis d'efficacité, merci de rester en contact avec le développeur de **GRR** pour éventuellement intégrer vos contributions à une distribution ultérieure.
-
-Enfin, **GRR** est livré en l'état sans aucune garantie. Les auteurs de cet outil ne pourront en aucun cas être tenus pour responsables d'éventuels bugs.
-
-
-Remarques concernant la sécurité
--------------------
-
-La sécurisation de **GRR** est dépendante de celle du serveur. Nous vous recommandons d'utiliser un serveur Apache ou Nginx sous Linux, en utilisant le protocole **https** (transferts de données cryptées), et en veillant à toujours utiliser les dernières versions des logiciels impliqués (notamment **Apache/Nginx** et **PHP**).
-
-L'EQUIPE DE DEVELOPPEMENT DE GRR NE SAURAIT EN AUCUN CAS ETRE TENUE POUR RESPONSABLE EN CAS D'INTRUSION EXTERIEURE LIEE A UNE FAIBLESSE DE GRR OU DE SON SUPPORT SERVEUR.
-
-(*) en cas de dysfonctionnement, il est possible que d'autres modules de PHP soient manquants. Merci d'en tenir l'équipe de développement informée.
-
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR</font></font></h1><a id="user-content-grr" class="anchor" aria-label="永久链接：GRR" href="#grr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR 是一种资源管理和预留工具。</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR是</font></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">MRBS</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应用程序的改编版</font><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/45bcad921d22e45355de67adec49110de3d5480bd9de0541fe66561cc9febe7a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f636f756e742f4a65726f6d654465766f6d652f475252"><img src="https://camo.githubusercontent.com/45bcad921d22e45355de67adec49110de3d5480bd9de0541fe66561cc9febe7a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f636f756e742f4a65726f6d654465766f6d652f475252" alt="GitHub 语言计数" data-canonical-src="https://img.shields.io/github/languages/count/JeromeDevome/GRR" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/167963a0965f9aada0641a13b3d63ebd1d6a49495480be89a249a31000e96bde/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f746f702f4a65726f6d654465766f6d652f475252"><img src="https://camo.githubusercontent.com/167963a0965f9aada0641a13b3d63ebd1d6a49495480be89a249a31000e96bde/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c616e6775616765732f746f702f4a65726f6d654465766f6d652f475252" alt="GitHub 顶级语言" data-canonical-src="https://img.shields.io/github/languages/top/JeromeDevome/GRR" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/689b7420a882d421be3bba7366a591583253b6f8a6f2ca5f51568b9faee2b74f/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652d646174652f4a65726f6d654465766f6d652f4752523f6c6162656c3d6461746525323072656c65617365"><img src="https://camo.githubusercontent.com/689b7420a882d421be3bba7366a591583253b6f8a6f2ca5f51568b9faee2b74f/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652d646174652f4a65726f6d654465766f6d652f4752523f6c6162656c3d6461746525323072656c65617365" alt="GitHub 发布日期" data-canonical-src="https://img.shields.io/github/release-date/JeromeDevome/GRR?label=date%20release" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/fc07defbd0dc0fcfbe976fcfe229f15437c203061c82079a81dc1847df51cc83/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f4a65726f6d654465766f6d652f475252"><img src="https://camo.githubusercontent.com/fc07defbd0dc0fcfbe976fcfe229f15437c203061c82079a81dc1847df51cc83/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f4a65726f6d654465766f6d652f475252" alt="GitHub 发布（按日期最新）" data-canonical-src="https://img.shields.io/github/v/release/JeromeDevome/GRR" style="max-width: 100%;"></a></p>
+<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/01a259ddb649cf62b298284898f0bc0f612afb79e37103fc7bb57be9ba6956cf/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652d646174652d7072652f4a65726f6d654465766f6d652f4752523f6c6162656c3d646174652532307072652d72656c6561736573"><img src="https://camo.githubusercontent.com/01a259ddb649cf62b298284898f0bc0f612afb79e37103fc7bb57be9ba6956cf/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f72656c656173652d646174652d7072652f4a65726f6d654465766f6d652f4752523f6c6162656c3d646174652532307072652d72656c6561736573" alt="GitHub（预）发布日期" data-canonical-src="https://img.shields.io/github/release-date-pre/JeromeDevome/GRR?label=date%20pre-releases" style="max-width: 100%;"></a>
+<a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/2317bed877e297e15489cdeb6c0bb57beaf5b1f17dec7af397ebb8263100bcac/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f4a65726f6d654465766f6d652f4752523f696e636c7564655f70726572656c6561736573266c6162656c3d7072652d72656c65617365"><img src="https://camo.githubusercontent.com/2317bed877e297e15489cdeb6c0bb57beaf5b1f17dec7af397ebb8263100bcac/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f762f72656c656173652f4a65726f6d654465766f6d652f4752523f696e636c7564655f70726572656c6561736573266c6162656c3d7072652d72656c65617365" alt="GitHub 版本（最新版本，包括预版本）" data-canonical-src="https://img.shields.io/github/v/release/JeromeDevome/GRR?include_prereleases&amp;label=pre-release" style="max-width: 100%;"></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站：</font></font><a href="https://grr.devome.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://grr.devome.com/</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">论坛：</font></font><a href="https://site.devome.com/fr/grr/forum-grr" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://site.devome.com/fr/grr/forum-grr</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><a href="https://discord.com/channels/484639573243068417/" rel="nofollow"><font style="vertical-align: inherit;">聊天</font></a><font style="vertical-align: inherit;">/Discord：https://discord.com/channels/484639573243068417/</font></font><a href="https://discord.com/channels/484639573243068417/" rel="nofollow"><font style="vertical-align: inherit;"></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档：</font></font><a href="https://devome.com/GRR/DOC/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://devome.com/GRR/DOC/</font></font></a></p>
+<div class="highlight highlight-source-diff notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-mi1"><span class="pl-mi1">+</span> Versions disposant de support et de correctifs: 4.3.X, les versions précédantes doivent être mise à jour.</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="+ Versions disposant de support et de correctifs: 4.3.X, les versions précédantes doivent être mise à jour." tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">要求：</font></font></strong></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PHP：&gt;= 7.2.5 &amp;&amp; &lt;= 8.3；至少需要模块 php-fileinfo、php-gd、php-mbstring、php-mysqli、php-mysqlnd、php-xml、php-intl (*) MySQL: &gt;= 5.4 &amp;&amp; &lt;= 5.7</font></font></p>
+<hr>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">设施</font></font></h2><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关安装过程的完整说明，请参阅</font></font><a href="https://devome.com/GRR/DOC/installation-et-mise-a-jour/installation" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了简化安装，只需在服务器上解压缩此存档，并在浏览器中指明解压文件所在的地址（例如：</font></font><a href="http://www.monsite.fr/grr" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">http://www.monsite.fr/grr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）。</font></font></p>
+<blockquote>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自动化安装的前提条件：服务器上有FTP空间，用于传输文件，那里有MySQL数据库（MySQL服务器地址、登录名、密码）</font></font></p>
+</blockquote>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更新</font></font></h2><a id="user-content-mise-à-jour" class="anchor" aria-label="永久链接：更新" href="#mise-à-jour"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您必须根据您当前的 GRR 版本按照以下过程进行经典更新：</font></font><code>Attention PHP 7.2.5 minimum !</code></p>
+<ul dir="auto">
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版本 &lt; GRR 4.0.X</font></font><a href="https://devome.com/GRR/DOC/installation-et-mise-a-jour/mise-a-jour-depuis-version-less-than-4" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档 - 更新 - 自版本 &lt; 4</font></font></a></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">版本 &gt;= GRR 4.0.X</font></font><a href="https://devome.com/GRR/DOC/installation-et-mise-a-jour/mise-a-jour-depuis-version-greater-than-4" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档 - 更新 - 自版本 &gt;= 4</font></font></a></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">除了经典更新之外，请将“个性化”文件夹设置为可写入。现在您的自定义设置将保存在这个文件夹中。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2><a id="user-content-licence" class="anchor" aria-label="永久链接：许可证" href="#licence"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR根据</font></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GNU 通用公共许可证</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的条款发布</font><font style="vertical-align: inherit;">，其内容可在英文版的“ </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LICENSE</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> ”文件和</font><font style="vertical-align: inherit;">法文版的“ </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">license_fr.html ”文件中找到。 </font></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是免费的，您可以复制、分发和修改它，前提是</font><font style="vertical-align: inherit;">重用或修改的</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR的每个部分均保留在</font></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GNU GPL</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">许可证之下。此外，为了提高效率，请与</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员保持联系，以便将您的贡献整合到后续发行版中。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最后，</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">按原样交付，不提供任何保证。在任何情况下，该工具的作者都不会对可能出现的错误负责。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安全注意事项</font></font></h2><a id="user-content-remarques-concernant-la-sécurité" class="anchor" aria-label="永久链接：安全注意事项" href="#remarques-concernant-la-sécurité"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GRR</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的安全性</font><font style="vertical-align: inherit;">依赖于服务器的安全性。我们建议您在 Linux 下使用 Apache 或 Nginx 服务器，使用</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">协议（加密数据传输），并确保始终使用相关软件的最新版本（特别是</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Apache/Nginx</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PHP</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果因 GRR 或其服务器支持薄弱而导致外部入侵，GRR 开发团队不承担任何责任。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(*) 如果出现故障，其他 PHP 模块可能会丢失。请随时通知开发团队。</font></font></p>
+</article></div>
